@@ -1,0 +1,45 @@
+Git账号：18738034880
+密码：z20000204
+
+推送工程代码到Gitee:
+git init
+git remote add origin https://gitee.com/zheng-kunpeng555/lcd128x64.git
+//git pull origin master
+git add .
+git commit -m "软件大全"
+git push origin master
+
+
+推送工程代码到GitHub:			选择SSH码
+git init
+git add .
+git remote add origin git@github.com:ZKP20000204/HUB-.git
+git commit -m "QT项目"
+git push -u origin master
+
+在已有仓库添加新的文件GitHub:
+
+git pull origin master
+git add . 注意add和.之间有空格
+git commit -m "git说明书"
+git push origin master
+
+
+可以先将小的文件发上去。然后
+在已有仓库添加新的大文件GitHub:
+
+git pull origin master
+git lfs install
+
+# 跟踪特定文件类型（示例）
+git lfs track "*.zip"
+git lfs track "*.exe"
+git lfs track "*.pdf"
+# 或跟踪具体文件
+git lfs track "Android/Android_HUB.zip"
+
+git add .gitattributes
+git commit -m "添加 LFS 支持"
+git add . 注意add和.之间有空格
+git commit -m "大文件"
+git push origin master
